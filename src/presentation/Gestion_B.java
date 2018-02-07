@@ -60,7 +60,7 @@ public class Gestion_B {
 					System.out.println("Numero du compte - NB: Un entier positif");
 					int cpid = lecture.nextInt();
 					while (cpid <= 0) {
-						System.err.println("Numero du compte - NB: Un entier positif");
+						System.err.println("Numero du compte - NB: Un entier positif ");
 						cpid = lecture.nextInt();
 					}
 
