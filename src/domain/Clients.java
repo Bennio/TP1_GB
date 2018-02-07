@@ -1,29 +1,28 @@
 package domain;
 
 public class Clients {
-	
-	//Declaratin des variables
-	
+
+	// Declaratin des variables
+
 	private Integer idClient;
 	private String nomClient;
 	private Integer qteCompte;
-	
-	
+
 	// Constructeur sans paremtre
-	
+
 	public Clients() {
 		super();
 	}
 
-	//Constructeur avec des parametres
-	
+	// Constructeur avec des parametres
+
 	/**
 	 *
 	 * @param idClient
 	 * @param nomClient
 	 * @param qteCompte
 	 */
-	
+
 	public Clients(Integer idClient, String nomClient, Integer qteCompte) {
 		super();
 		this.idClient = idClient;
@@ -32,7 +31,7 @@ public class Clients {
 	}
 
 	// Accesseurs et modificateurs
-	
+
 	/**
 	 * @return the idClient
 	 */
@@ -41,7 +40,8 @@ public class Clients {
 	}
 
 	/**
-	 * @param idClient the idClient to set
+	 * @param idClient
+	 *            the idClient to set
 	 */
 	public void setIdClient(Integer idClient) {
 		this.idClient = idClient;
@@ -55,7 +55,8 @@ public class Clients {
 	}
 
 	/**
-	 * @param nomClient the nomClient to set
+	 * @param nomClient
+	 *            the nomClient to set
 	 */
 	public void setNomClient(String nomClient) {
 		this.nomClient = nomClient;
@@ -69,27 +70,27 @@ public class Clients {
 	}
 
 	/**
-	 * @param qteCompte the qteCompte to set
+	 * @param qteCompte
+	 *            the qteCompte to set
 	 */
 	public void setQteCompte(Integer qteCompte) {
 		this.qteCompte = qteCompte;
 	}
-	
-	// Methode de creation d'un client
-	
-		public Clients creerClient(Clients cl){
-			return cl;
-		}
 
-		/* (non-Javadoc)
-		 * @see java.lang.Object#toString()
-		 */
-		@Override
-		public String toString() {
-			return "\n"
-					+ "Les informations d'un client sont: \n"
-					+ "Numero Client: " + idClient + " \n"
-					+ "Nom Client: " + nomClient + " \n"
-					+ "Nombre Compte=" + qteCompte + "";
-		}
+	// Methode de creation d'un client
+
+	public Clients creerClient(Clients cl) {
+		return cl;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "\n" + "Les informations d'un client sont: \n" + "Numero Client: " + idClient + " \n" + "Nom Client: "
+				+ nomClient + " \n" + "Nombre Compte=" + qteCompte + "";
+	}
 }
