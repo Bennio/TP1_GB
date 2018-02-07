@@ -294,18 +294,24 @@ public class Gestion_B {
 
 					else {
 						boolean trouver = false;
+						int i = 0;
 						for (Comptes cpte_tenu : listeCpte) {
 							int tempCompte = cpte_tenu.getIdClient();
 							if (tempCompte == idClient) {
-								System.out.println("\nLes caracteristiques du compte sont:");
-								System.out.println(cpte_tenu);
+								++i;
+								
+								
+//								System.out.println(cpte_tenu);
 
 								trouver = true;
+								
 							}
 						}
+						System.err.println("Nombre de Compte: "+i);
+						
 
 						if (trouver == false) {
-							System.err.println("Ce numero de compte n'existe pas.");
+							System.err.println("Ce client n'existe pas.");
 
 						}
 					}
@@ -347,14 +353,23 @@ public class Gestion_B {
 			case 'h':
 			case 'H':
 				try {
-					for (int x = 0; x < listeCpte.size(); x++) {
-						System.out.println("");
-						System.out.println(listeCpte.get(x).toString());
-						System.out.println("");
+					
+					
+					if (listeCpte.size() != 0) {
+						System.out.println("\nLa liste des comptes:");
 					}
+					for (Comptes compte : listeCpte) {
+						System.out.println(compte);
+					}
+					
 				} catch (Exception e) {
 					System.out.println(e.toString());
 				}
+				break;
+			case 'i':
+			case 'I':
+				System.out.println("Merci de votre fidelite a notre banque, aurevoir !" + "");
+				System.exit(0);
 				break;
 
 			default:
@@ -366,9 +381,7 @@ public class Gestion_B {
 		}
 
 		while (choix != 'I');
-		{
-			System.out.println("Merci de votre fidelite a notre banque, aurevoir !" + "");
-		}
+		
 
 		lecture.close();
 	}
