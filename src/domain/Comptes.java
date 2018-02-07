@@ -189,7 +189,7 @@ public class Comptes {
 		@Override
 		public String toString() {
 			return "\n"
-					+ "Les caracteristiques du compte sont: \n"
+					
 					+ "Numero du compte: " + idCompte + " \n"
 					+ "Numero du titulaire: " + idClient + " \n"
 					+ "Nom du titulaire: " + nomClient+ " \n"

@@ -152,7 +152,7 @@ public class Transactions {
 		@Override
 		public String toString() {
 			return "\n"
-					+ "Les informations de la transaction sont: \n"
+					
 					+ "Numero Transaction: " + numTransaction + " \n"
 					+ "Numero Client: " + idClient + " \n"
 					+ "Numero Compte: " + idCompte + " \n"
